@@ -13,26 +13,122 @@ html(lang="en")
       nav.wrap
         h3 WDS JS Projects
         ul.canHazBurger
-          li Midi Piano
           li
           li
           li
         ul.navMain.hidden
-          li Midi Piano
+          li 
+            a(href="#piano") Midi Piano
           li item2
           li item3
           li item4
 
-    .piano
-      .key.white(data-note="C")
-      .key.black(data-note="Db")
-      .key.white(data-note="D")
-      .key.black(data-note="Eb")
-      .key.white(data-note="E")
-      .key.white(data-note="F")
-      .key.black(data-note="Gb")
-      .key.white(data-note="G")
-      .key.black(data-note="Ab")
-      .key.white(data-note="A")
-      .key.black(data-note="Bb")
-      .key.white(data-note="B")
+    p This is a repo dedicated to the projects I am doing for Web Dev Simplified JS beginner course
+
+    #piano.wrap
+      h2 Midi Piano
+      .piano
+        .key.white(data-note="C")
+        .key.black(data-note="Db")
+        .key.white(data-note="D")
+        .key.black(data-note="Eb")
+        .key.white(data-note="E")
+        .key.white(data-note="F")
+        .key.black(data-note="Gb")
+        .key.white(data-note="G")
+        .key.black(data-note="Ab")
+        .key.white(data-note="A")
+        .key.black(data-note="Bb")
+        .key.white(data-note="B")
+
+    #quizApp.wrap
+      h2 Quiz App
+      #alert
+      .alert-title Congratulations!!
+      |     You got them all right!
+
+      form#quiz-form
+        ol
+          li.question-item
+            div
+              | What does this code return? (
+              code 0 || '' || false || "Hi"
+              | )
+
+            div
+              ol
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-1' value='false')
+                    code 0
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-1' value='true')
+                    code "Hi"
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-1' value='false')
+                    code false
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-1' value='false')
+                    code ''
+
+          li.question-item
+            div What is it called when a function calls itself?
+            div
+              ol
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-2' value='false')
+                    |                 Inception
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-2' value='false')
+                    |                 Self-Referential
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-2' value='true')
+                    |                 Recursion
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-2' value='false')
+                    |                 Who Cares
+
+          li.question-item
+            div
+              | How do you access the value of the 
+              code data-count
+              |  data attribute in JavaScript?
+
+            div
+              ol
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-3' value='true')
+                    code element.dataset.count
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-3' value='false')
+                    code element.dataAttribute.count
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-3' value='false')
+                    code element.dataset.dataCount
+
+                li.answer-item
+                  label
+                    input.answer(type='radio' name='answer-3' value='false')
+                    code element.dataCount
+
+        button(type='submit') Check
+
+      
