@@ -1,0 +1,41 @@
+{
+	"name": "psp-template",
+	"version": "1.0.0",
+	"description": "Pug-Scss-Parcel template by 1mind",
+	"author": "b1Mind",
+	"main": "/dist/index.pug",
+	"source": "/src/index.pug",
+	"scripts": {
+		"dev": "parcel serve src/*.pug --no-cache --no-source-maps --port 9001 -d ./dist/dev/",
+		"build": "parcel build src/*.pug --no-cache --no-source-maps --public-url ./ -d ./dist/build/",
+		"export": "parcel build src/*.pug --no-cache --no-source-maps -d ./public/",
+		"deploy": "npm run build && node ./scripts/deploy.js",
+		"github": "parcel build src/*.pug --no-cache --no-source-maps --public-url ./ -d ./docs/"
+	},
+	"devDependencies": {
+		"autoprefixer": "^9.8.6",
+		"gh-pages": "^3.1.0",
+		"node-sass": "^4.14.1",
+		"parcel-bundler": "^1.12.4",
+		"parcel-plugin-static-files-copy": "^2.5.0",
+		"postcss": "^7.0.35",
+		"postcss-combine-media-query": "^1.0.1",
+		"pug": "^3.0.0"
+	},
+	"dependencies": {
+		"src": "^1.1.2"
+	},
+	"postcss": {
+		"plugins": {
+			"postcss-combine-media-query": {},
+			"autoprefixer": {
+				"grid": "autoplace",
+				"overrideBrowserslist": [
+					"> 1%",
+					"last 2 versions",
+					"ie >= 11"
+				]
+			}
+		}
+	}
+}

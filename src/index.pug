@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
+		link(rel="stylesheet", href="scss/style.scss")
+		script(defer src="js/main.js")
+		title Change ME!
+
+	body
+		header
+			nav.wrap
+				h3 LogoHere
+				ul.canHazBurger
+					li
+					li
+					li
+				ul.navMain.hidden
+					li item1
+					li item2
+					li item3
+					li item4
+
+		main
+			.center
+				img(src="../static/images/lostMatrix.jpg")
+			.wrap
+				h1.center This world needs more hellos
+				-let a = 6
+				.grid
+					while a > 0
+						.cell
+							p I am a "Hello World"
+						-a--
