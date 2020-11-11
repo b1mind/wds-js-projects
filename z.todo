@@ -6,3 +6,4 @@ quiz-Todo:
   ✔ 5. For each incorrect answer add the class `incorrect` to the parent with the class `question-item` and remove the class `correct`. @done(20-11-10 18:45)
   ✔ 6. BONUS: Make sure unanswered questions show up as incorrect. The easiest way to do this is to add the incorrect class and removing the correct class from all question items before checking the correct answers @done(20-11-10 18:51)
   ✔ 7. BONUS: If all answers are correct show the element with the id `alert` and hide it after one second (look into setTimeout) (use the class active to show the alert and remove the class to hide it) @done(20-11-10 19:10)
+  ☐ 8.**Revisit Kyles the way Kyle did it and add code or refactor self answers
