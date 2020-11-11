@@ -14,12 +14,13 @@ const alert = document.getElementById('alert')
 function checkAnswers() {
   inputs.forEach(e => {
     if (e.checked) {
+      let parent = e.closest('.question-item')
       if (e.value === 'true') {
-        console.log('correct')
-        console.dir(e)
+        parent.classList.add('correct')
+        parent.classList.remove('incorrect')
       } else {
-        console.log('incorrect')
-        console.dir(e)
+        parent.classList.remove('correct')
+        parent.classList.add('incorrect')
       }
     }
   })
@@ -27,5 +28,8 @@ function checkAnswers() {
 
 form.addEventListener('submit', e => {
   e.preventDefault()
+  questions.forEach(e => {
+    e.classList.add('incorrect')
+  })
   checkAnswers()
 })
