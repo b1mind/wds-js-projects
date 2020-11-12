@@ -52,13 +52,13 @@ loginForm.addEventListener('submit', e => {
   //      1. Ensure the username is at least 6 characters long
 
   if (usernameInput.value.length <= 5) {
-    let msg = 'Username must be 6 characters long'
+    let msg = 'Username must be over 5 characters long'
     errorMsgs = [msg, ...errorMsgs]
   }
 
   //      2. Ensure the password is at least 10 characters long
   if (passwordInput.value.length <= 9) {
-    let msg = 'Password must be 10 characters long'
+    let msg = 'Password must be over 9 characters long'
     errorMsgs = [msg, ...errorMsgs]
   }
 
@@ -70,7 +70,7 @@ loginForm.addEventListener('submit', e => {
 
   //      4. Ensure the terms checkbox is checked
   if (!termsInput.checked) {
-    let msg = 'Must agree to terms'
+    let msg = 'Must agree to my terms'
     errorMsgs = [msg, ...errorMsgs]
   }
 
