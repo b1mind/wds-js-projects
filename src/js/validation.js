@@ -1,31 +1,82 @@
 // TODO: Select all elements needed
 //    Use the HTML to figure out what classes/ids will work best for selecting each element
+const form = document.getElementById('form')
+const username = document.getElementById('username')
+const password = document.getElementById('password')
+const passwordConfirmation = document.getElementById('password-confirmation')
+const terms = document.getElementById('terms')
+const errorsList = document.querySelector('.errors-list')
+
+// TODO: Define this function
+// Use a while loop to clear error list from dom
+
+function clearErrors() {
+  // let errorCount = errorsList.childElementCount
+  // while (errorCount > 0) {
+
+  while (errorsList.firstChild) {
+    console.dir(errorsList)
+    errorsList.removeChild(errorsList.firstChild)
+    // errorCount--
+  }
+
+  // you can cheat by clearing innerHTML if you get stuck
+  // errorsList.innerHTML = ''
+  errorsList.closest('.errors').classList.remove('show')
+}
+
+// TODO: Define this function
+
+function showErrors(msgs) {
+  // Add each error to the error-list element
+
+  msgs.forEach(msg => {
+    // Make sure to use an li as the element for each error
+    let li = document.createElement('li')
+    li.innerHTML = msg
+    errorsList.appendChild(li)
+    console.log(msg)
+  })
+
+  // Also, make sure you add the show class to the errors container
+  errorsList.closest('.errors').classList.add('show')
+}
 
 // TODO: Create an event listener for when the form is submitted and do the following inside of it.
+form.addEventListener('submit', e => {
+  //    TODO: Create an array to store all error messages and clear any old error messages
+  let errorMsgs = []
+  clearErrors()
 
-//    TODO: Create an array to store all error messages and clear any old error messages
+  //    TODO: Define the following validation checks with appropriate error messages
+  //      1. Ensure the username is at least 6 characters long
 
-//    TODO: Define the following validation checks with appropriate error messages
+  if (username.value.length <= 5) {
+    let msg = 'Username must be 6 characters long'
+    errorMsgs = [msg, ...errorMsgs]
+  }
 
-//      1. Ensure the username is at least 6 characters long
-//      2. Ensure the password is at least 10 characters long
-//      3. Ensure the password and confirmation password match
-//      4. Ensure the terms checkbox is checked
+  //      2. Ensure the password is at least 10 characters long
+  if (password.value.length <= 9) {
+    let msg = 'Password must be 10 characters long'
+    errorMsgs = [msg, ...errorMsgs]
+  }
 
-//    TODO: If there are any errors then prevent the form from submitting and show the error messages
+  //      3. Ensure the password and confirmation password match
+  if (password.value !== passwordConfirmation.value) {
+    let msg = 'Passwords must match'
+    errorMsgs = [msg, ...errorMsgs]
+  }
 
-// TODO: Define this function
-function clearErrors() {
-  // Loop through all the children of the error-list element and remove them
-  // IMPORTANT: This cannot be done with a forEach loop or a normal for loop since as you remove children it will modify the list you are looping over which will not work
-  // I recommend using a while loop to accomplish this task
-  // This is the trickiest part of this exercise so if you get stuck and are unable to progress you can also set the innerHTML property of the error-list to an empty string and that will also clear the children. I recommend trying to accomplish this with a while loop, though, for practice.
-  // Also, make sure you remove the show class to the errors container
-}
+  //      4. Ensure the terms checkbox is checked
+  if (!terms.checked) {
+    let msg = 'Must agree to terms'
+    errorMsgs = [msg, ...errorMsgs]
+  }
 
-// TODO: Define this function
-function showErrors(errorMessages) {
-  // Add each error to the error-list element
-  // Make sure to use an li as the element for each error
-  // Also, make sure you add the show class to the errors container
-}
+  //    TODO: If there are any errors then prevent the form from submitting and show the error messages
+  if (errorMsgs.length > 0) {
+    showErrors(errorMsgs)
+    e.preventDefault()
+  }
+})

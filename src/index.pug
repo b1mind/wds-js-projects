@@ -85,7 +85,7 @@ html(lang="en")
                 li.answer-item
                   label
                     input.answer(type='radio' name='answer-2' value='false')
-                    |Inception
+                    | Inception
 
                 li.answer-item
                   label
@@ -132,24 +132,31 @@ html(lang="en")
 
         button(type='submit') Check
 
-    form#form(action='thank-you.html')
-      .errors
-        h3.error-title Error
-        ul.errors-list
-      .form-group
-        label(for='username') Username
-        input#username(type='text' name='username')
-      .form-group
-        label(for='password') Password
-        input#password(type='password' name='password')
-      .form-group
-        label(for='password-confirmation') Password Confirmation
-        input#password-confirmation(type='password' name='password-confirmation')
-      .form-group
-        label(for='terms')
-          input#terms(type='checkbox' name='terms')
-          |         Agree To Terms?
-      button(type='submit') Create Account
+    #validation.wrap
+
+      form#form(action='thank-you.html')
+        .errors
+          h3.error-title Error
+          ul.errors-list
+
+        .form-group
+          label(for='username') Username
+          input#username(type='text' name='username')
+
+        .form-group
+          label(for='password') Password
+          input#password(type='password' name='password')
+
+        .form-group
+          label(for='password-confirmation') Password Confirmation
+          input#password-confirmation(type='password' name='password-confirmation')
+
+        .form-group
+          label(for='terms')
+            input#terms(type='checkbox' name='terms')
+            | Agree To Terms?
+
+        button(type='submit') Create Account
 
 
       
