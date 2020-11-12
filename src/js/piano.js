@@ -1,13 +1,5 @@
-console.log('hi there')
-
 const audioContext = new AudioContext()
-
-const nav = document.querySelector('.navMain')
-const canHazBurger = document.querySelector('.canHazBurger')
-
-canHazBurger.addEventListener('click', e => {
-  nav.classList.toggle('hidden')
-})
+const useKeys = document.getElementById('useKeys')
 
 const NOTE_DETAILS = [
   { note: 'C', key: 'S', frequency: 261.626, active: false },
@@ -25,6 +17,7 @@ const NOTE_DETAILS = [
 ]
 
 document.addEventListener('keydown', e => {
+  if (!useKeys.checked) return
   if (e.repeat) return
   const keyboardKey = e.code
   const noteDetail = getNoteDetail(keyboardKey)
