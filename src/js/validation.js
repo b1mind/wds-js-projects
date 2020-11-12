@@ -15,7 +15,6 @@ function clearErrors() {
   // while (errorCount > 0) {
 
   while (errorsList.firstChild) {
-    console.dir(errorsList)
     errorsList.removeChild(errorsList.firstChild)
     // errorCount--
   }
@@ -35,7 +34,6 @@ function showErrors(msgs) {
     let li = document.createElement('li')
     li.innerHTML = msg
     errorsList.appendChild(li)
-    console.log(msg)
   })
 
   // Also, make sure you add the show class to the errors container
