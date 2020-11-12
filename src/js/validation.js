@@ -1,10 +1,10 @@
 // TODO: Select all elements needed
 //    Use the HTML to figure out what classes/ids will work best for selecting each element
-const form = document.getElementById('form')
-const username = document.getElementById('username')
-const password = document.getElementById('password')
-const passwordConfirmation = document.getElementById('password-confirmation')
-const terms = document.getElementById('terms')
+const loginForm = document.getElementById('form')
+const usernameInput = document.getElementById('username')
+const passwordInput = document.getElementById('password')
+const passwordConfirmationInput = document.getElementById('password-confirmation')
+const termsInput = document.getElementById('terms')
 const errorsList = document.querySelector('.errors-list')
 
 // TODO: Define this function
@@ -43,7 +43,7 @@ function showErrors(msgs) {
 }
 
 // TODO: Create an event listener for when the form is submitted and do the following inside of it.
-form.addEventListener('submit', e => {
+loginForm.addEventListener('submit', e => {
   //    TODO: Create an array to store all error messages and clear any old error messages
   let errorMsgs = []
   clearErrors()
@@ -51,25 +51,25 @@ form.addEventListener('submit', e => {
   //    TODO: Define the following validation checks with appropriate error messages
   //      1. Ensure the username is at least 6 characters long
 
-  if (username.value.length <= 5) {
+  if (usernameInput.value.length <= 5) {
     let msg = 'Username must be 6 characters long'
     errorMsgs = [msg, ...errorMsgs]
   }
 
   //      2. Ensure the password is at least 10 characters long
-  if (password.value.length <= 9) {
+  if (passwordInput.value.length <= 9) {
     let msg = 'Password must be 10 characters long'
     errorMsgs = [msg, ...errorMsgs]
   }
 
   //      3. Ensure the password and confirmation password match
-  if (password.value !== passwordConfirmation.value) {
+  if (passwordInput.value !== passwordConfirmationInput.value) {
     let msg = 'Passwords must match'
     errorMsgs = [msg, ...errorMsgs]
   }
 
   //      4. Ensure the terms checkbox is checked
-  if (!terms.checked) {
+  if (!termsInput.checked) {
     let msg = 'Must agree to terms'
     errorMsgs = [msg, ...errorMsgs]
   }
