@@ -1,20 +1,22 @@
 Extra1M:
-  ✘ make a pug layout and multiple pages for projects @cancelled(20-11-11 20:36)
-  ✘ create pages and update nav for different projects @cancelled(20-11-11 20:36)
-  ☐ make nav link to anchors single page layout...
   ☐ style a bit? if only one page make nicer sections
-  ☐ give piano keys the letters 
-  ☐ rebind keys for piano and make a toggle to enable ?
+  ✔ give piano keys the letters @done(20-11-12 11:34)
+  ✔ rebind keys for piano @done(20-11-12 11:34)
+  ✔ make a toggle to enable ? @done(20-11-12 11:50)
   ☐ restyle questions to be cards
   ☐ make login have succes modal/overlay vs page
   ☐ style login a bit?
 
-Quiz-Todo:
-  ✔ 1. Prevent the default behaviour @done(20-11-10 16:50)
-  ✔ 2. Get all selected answers (use the `checked` property on the input to determine if it is selected or not) @done(20-11-10 16:50)
-  ✔ 3. Loop through the selected answer to see if they are correct or not (Check the value of the answer to see if it is the string "true") @done(20-11-10 16:50)
-  ✔ 4. For each correct answer add the class `correct` to the parent with the class `question-item` and remove the class `incorrect`. @done(20-11-10 18:44)
-  ✔ 5. For each incorrect answer add the class `incorrect` to the parent with the class `question-item` and remove the class `correct`. @done(20-11-10 18:45)
-  ✔ 6. BONUS: Make sure unanswered questions show up as incorrect. The easiest way to do this is to add the incorrect class and removing the correct class from all question items before checking the correct answers @done(20-11-10 18:51)
-  ✔ 7. BONUS: If all answers are correct show the element with the id `alert` and hide it after one second (look into setTimeout) (use the class active to show the alert and remove the class to hide it) @done(20-11-10 19:10)
-  ✔ 8. **Revisit the way Kyle did it and add code in comments or refactor self answers @done(20-11-11 20:29)
+
+Archive:
+  ✘ make a pug layout and multiple pages for projects @cancelled(20-11-11 20:36) @project(Extra1M)
+  ✘ create pages and update nav for different projects @cancelled(20-11-11 20:36) @project(Extra1M)
+  ✔ make nav link to anchors single page layout... @done(20-11-11 21:28) @project(Extra1M)
+  ✔ 1. Prevent the default behaviour @done(20-11-10 16:50) @project(Quiz-Todo)
+  ✔ 2. Get all selected answers (use the `checked` property on the input to determine if it is selected or not) @done(20-11-10 16:50) @project(Quiz-Todo)
+  ✔ 3. Loop through the selected answer to see if they are correct or not (Check the value of the answer to see if it is the string "true") @done(20-11-10 16:50) @project(Quiz-Todo)
+  ✔ 4. For each correct answer add the class `correct` to the parent with the class `question-item` and remove the class `incorrect`. @done(20-11-10 18:44) @project(Quiz-Todo)
+  ✔ 5. For each incorrect answer add the class `incorrect` to the parent with the class `question-item` and remove the class `correct`. @done(20-11-10 18:45) @project(Quiz-Todo)
+  ✔ 6. BONUS: Make sure unanswered questions show up as incorrect. The easiest way to do this is to add the incorrect class and removing the correct class from all question items before checking the correct answers @done(20-11-10 18:51) @project(Quiz-Todo)
+  ✔ 7. BONUS: If all answers are correct show the element with the id `alert` and hide it after one second (look into setTimeout) (use the class active to show the alert and remove the class to hide it) @done(20-11-10 19:10) @project(Quiz-Todo)
+  ✔ 8. **Revisit the way Kyle did it and add code in comments or refactor self answers @done(20-11-11 20:29) @project(Quiz-Todo)
