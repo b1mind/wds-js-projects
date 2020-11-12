@@ -28,19 +28,21 @@ html(lang="en")
 
     #piano.wrap
       h2 Midi Piano
+      label Enable Keys
+        input#useKeys(type="checkbox", name="useKeys")
       .piano
-        .key.white(data-note="C")
-        .key.black(data-note="Db")
-        .key.white(data-note="D")
-        .key.black(data-note="Eb")
-        .key.white(data-note="E")
-        .key.white(data-note="F")
-        .key.black(data-note="Gb")
-        .key.white(data-note="G")
-        .key.black(data-note="Ab")
-        .key.white(data-note="A")
-        .key.black(data-note="Bb")
-        .key.white(data-note="B")
+        .key.white(data-note="C") S
+        .key.black(data-note="Db") E
+        .key.white(data-note="D") D
+        .key.black(data-note="Eb") R
+        .key.white(data-note="E") F
+        .key.white(data-note="F") H
+        .key.black(data-note="Gb") U
+        .key.white(data-note="G") J
+        .key.black(data-note="Ab") I
+        .key.white(data-note="A") K
+        .key.black(data-note="Bb") O
+        .key.white(data-note="B") L
 
     #quiz.wrap
       h2 Quiz App
@@ -134,6 +136,7 @@ html(lang="en")
         button(type='submit') Check
 
     #validation.wrap
+      h2 Form Validation
 
       form#form(action='thank-you.html')
         .errors

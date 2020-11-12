@@ -160,6 +160,9 @@ nav {
 .key {
   height: calc(var(--width) * 4);
   width: var(--width);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .white {
@@ -174,6 +177,7 @@ nav {
 
 .black {
   --width: 60px;
+  color: white;
   background-color: black;
   margin-left: calc(var(--width) / -2);
   margin-right: calc(var(--width) / -2);
