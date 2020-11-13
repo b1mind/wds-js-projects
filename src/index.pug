@@ -28,8 +28,9 @@ html(lang="en")
 
     #piano.wrap
       h2 Midi Piano
-      label Enable Keys
+      label 
         input#useKeys(type="checkbox", name="useKeys")
+        | Enable Keys
       .piano
         .key.white(data-note="C") S
         .key.black(data-note="Db") E
@@ -47,17 +48,17 @@ html(lang="en")
     #quiz.wrap
       h2 Quiz App
 
-      #alert
-        .alert-title Congratulations!!
-        |     You got them all right!
-
       form#quiz-form
+        #alert
+          .alert-title 
+            span 🥳 Congratulations!!
+            h3 You got them all right!
+
         ol
           li.question-item
             div
-              | What does this code return? (
-              code 0 || '' || false || "Hi"
-              | )
+              | What does this code return? 
+              code ( 0 || '' || false || "Hi  )
 
             div
               ol
@@ -133,34 +134,36 @@ html(lang="en")
                     input.answer(type='radio' name='answer-3' value='false')
                     code element.dataCount
 
-        button(type='submit') Check
+          button(type='submit') Check
 
     #validation.wrap
       h2 Form Validation
 
       form#form(action='thank-you.html')
+        .input-wrap
+          .form-group
+            label(for='username') Username
+            input#username(type='text' name='username')
+
+          .form-group
+            label(for='password') Password
+            input#password(type='password' name='password')
+
+          .form-group
+            label(for='password-confirmation') Password Confirmation
+            input#password-confirmation(type='password' name='password-confirmation')
+
+          .form-group
+            label(for='terms')
+              input#terms(type='checkbox' name='terms')
+              | Agree To Terms?
+
+          button(type='submit') Create Account
+
         .errors
           h3.error-title Error
           ul.errors-list
 
-        .form-group
-          label(for='username') Username
-          input#username(type='text' name='username')
-
-        .form-group
-          label(for='password') Password
-          input#password(type='password' name='password')
-
-        .form-group
-          label(for='password-confirmation') Password Confirmation
-          input#password-confirmation(type='password' name='password-confirmation')
-
-        .form-group
-          label(for='terms')
-            input#terms(type='checkbox' name='terms')
-            | Agree To Terms?
-
-        button(type='submit') Create Account
 
 
-      
+        
