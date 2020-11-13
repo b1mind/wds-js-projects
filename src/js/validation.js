@@ -51,25 +51,25 @@ loginForm.addEventListener('submit', e => {
 
   if (usernameInput.value.length <= 5) {
     let msg = 'Username must be over 5 characters long'
-    errorMsgs = [msg, ...errorMsgs]
+    errorMsgs = [...errorMsgs, msg]
   }
 
   //      2. Ensure the password is at least 10 characters long
   if (passwordInput.value.length <= 9) {
     let msg = 'Password must be over 9 characters long'
-    errorMsgs = [msg, ...errorMsgs]
+    errorMsgs = [...errorMsgs, msg]
   }
 
   //      3. Ensure the password and confirmation password match
-  if (passwordInput.value !== passwordConfirmationInput.value) {
-    let msg = 'Passwords must match'
-    errorMsgs = [msg, ...errorMsgs]
+  if (passwordInput.value !== passwordConfirmationInput.value || !passwordConfirmationInput.value) {
+    let msg = 'Passwords must be confirmed and match'
+    errorMsgs = [...errorMsgs, msg]
   }
 
   //      4. Ensure the terms checkbox is checked
   if (!termsInput.checked) {
     let msg = 'Must agree to my terms'
-    errorMsgs = [msg, ...errorMsgs]
+    errorMsgs = [...errorMsgs, msg]
   }
 
   //    TODO: If there are any errors then prevent the form from submitting and show the error messages
