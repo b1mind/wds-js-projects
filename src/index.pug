@@ -6,7 +6,7 @@ html(lang="en")
     link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
     link(rel="stylesheet", href="scss/style.scss")
     script(defer src="js/main.js")
-    title Change ME!
+    title Projects
 
   body
     header
@@ -24,146 +24,165 @@ html(lang="en")
           li 
             a(href="#validation") Sign Up
 
-    p This is a repo dedicated to the projects I am doing for Web Dev Simplified JS beginner course
+    main
+      section
+        .hero.wrap
+          h1 Java Script Simplified (Beginner)
+          p This is a repo dedicated to the projects I am doing for Web Dev Simplified JavaScript Simplified beginner course
 
-    #piano.wrap
-      h2 Midi Piano
-      label 
-        input#useKeys(type="checkbox", name="useKeys")
-        | Enable Keys
-      .piano
-        .key.white(data-note="C") S
-        .key.black(data-note="Db") E
-        .key.white(data-note="D") D
-        .key.black(data-note="Eb") R
-        .key.white(data-note="E") F
-        .key.white(data-note="F") H
-        .key.black(data-note="Gb") U
-        .key.white(data-note="G") J
-        .key.black(data-note="Ab") I
-        .key.white(data-note="A") K
-        .key.black(data-note="Bb") O
-        .key.white(data-note="B") L
+      section
+        #piano.wrap
+          h2 Midi Piano
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita numquam blanditiis assumenda totam, eaque, odit voluptate eum libero perferendis earum! Labore reprehenderit fugit similique voluptatibus rerum quas cupiditate vitae!
 
-    #quiz.wrap
-      h2 Quiz App
-
-      form#quiz-form
-        #alert
-          .alert-title 
-            span 🥳 Congratulations!!
-            h3 You got them all right!
-
-        ol
-          li.question-item
-            div
-              | What does this code return? 
-              code ( 0 || '' || false || "Hi  )
-
-            div
-              ol
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-1' value='false')
-                    code 0
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-1' value='true')
-                    code "Hi"
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-1' value='false')
-                    code false
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-1' value='false')
-                    code ''
-
-          li.question-item
-            div What is it called when a function calls itself?
-            div
-              ol
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-2' value='false')
-                    | Inception
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-2' value='false')
-                    | Self-Referential
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-2' value='true')
-                    | Recursion
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-2' value='false')
-                    | Who Cares
-
-          li.question-item
-            div
-              | How do you access the value of the 
-              code data-count
-              |  data attribute in JavaScript?
-
-            div
-              ol
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-3' value='true')
-                    code element.dataset.count
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-3' value='false')
-                    code element.dataAttribute.count
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-3' value='false')
-                    code element.dataset.dataCount
-
-                li.answer-item
-                  label
-                    input.answer(type='radio' name='answer-3' value='false')
-                    code element.dataCount
-
-          button(type='submit') Check
-
-    #validation.wrap
-      h2 Form Validation
-
-      form#form(action='thank-you.html')
-        .input-wrap
-          .form-group
-            label(for='username') Username
-            input#username(type='text' name='username')
-
-          .form-group
-            label(for='password') Password
-            input#password(type='password' name='password')
-
-          .form-group
-            label(for='password-confirmation') Password Confirmation
-            input#password-confirmation(type='password' name='password-confirmation')
-
-          .form-group
-            label(for='terms')
-              input#terms(type='checkbox' name='terms')
-              | Agree To Terms?
-
-          button(type='submit') Create Account
-
-        .errors
-          h3.error-title Error
-          ul.errors-list
+          label 
+            input#useKeys(type="checkbox", name="useKeys")
+            | Enable Keys
+          .piano
+            .key.white(data-note="C") S
+            .key.black(data-note="Db") E
+            .key.white(data-note="D") D
+            .key.black(data-note="Eb") R
+            .key.white(data-note="E") F
+            .key.white(data-note="F") H
+            .key.black(data-note="Gb") U
+            .key.white(data-note="G") J
+            .key.black(data-note="Ab") I
+            .key.white(data-note="A") K
+            .key.black(data-note="Bb") O
+            .key.white(data-note="B") L
+            .rotate
+              .rotate-text
+                .close ❌
+                h2 🔁
+                h3 Rotate Me 
+                span for better experience
 
 
+      section
+        #quiz.wrap
+          h2 Quiz App
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita numquam blanditiis assumenda totam, eaque, odit voluptate eum libero perferendis earum! Labore reprehenderit fugit similique voluptatibus rerum quas cupiditate vitae!
 
-        
+          form#quiz-form
+            #alert
+              .alert-title 
+                span 🥳 Congratulations!!
+                h3 You got them all right!
+
+            ol
+              li.question-item
+                div
+                  | What does this code return? 
+                  br
+                  code ( 0 || '' || false || "Hi  )
+
+                div
+                  ol
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-1' value='false')
+                        code 0
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-1' value='true')
+                        code "Hi"
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-1' value='false')
+                        code false
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-1' value='false')
+                        code ''
+
+              li.question-item
+                div What is it called when a function calls itself?
+                div
+                  ol
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-2' value='false')
+                        | Inception
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-2' value='false')
+                        | Self-Referential
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-2' value='true')
+                        | Recursion
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-2' value='false')
+                        | Who Cares
+
+              li.question-item
+                div
+                  | How do you access the value of the 
+                  code data-count
+                  |  data attribute in JavaScript?
+
+                div
+                  ol
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-3' value='true')
+                        code element.dataset.count
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-3' value='false')
+                        code element.dataAttribute.count
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-3' value='false')
+                        code element.dataset.dataCount
+
+                    li.answer-item
+                      label
+                        input.answer(type='radio' name='answer-3' value='false')
+                        code element.dataCount
+
+              button(type='submit') Check
+
+      section
+        #validation.wrap
+          h2 Form Validation
+          p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore expedita numquam blanditiis assumenda totam, eaque, odit voluptate eum libero perferendis earum! Labore reprehenderit fugit similique voluptatibus rerum quas cupiditate vitae!
+
+          form#form(action='thank-you.html')
+            .input-wrap
+              .form-group
+                label(for='username') Username
+                input#username(type='text' name='username')
+
+              .form-group
+                label(for='password') Password
+                input#password(type='password' name='password')
+
+              .form-group
+                label(for='password-confirmation') Password Confirmation
+                input#password-confirmation(type='password' name='password-confirmation')
+
+              .form-group
+                label(for='terms')
+                  input#terms(type='checkbox' name='terms')
+                  | Agree To Terms?
+
+              button(type='submit') Create Account
+
+            .errors
+              h3.error-title Error
+              ul.errors-list
+
+
+
+            

@@ -1,5 +1,6 @@
 const audioContext = new AudioContext()
 const useKeys = document.getElementById('useKeys')
+const closeRotate = document.querySelector('.close')
 
 const NOTE_DETAILS = [
   { note: 'C', key: 'S', frequency: 261.626, active: false },
@@ -15,6 +16,11 @@ const NOTE_DETAILS = [
   { note: 'Bb', key: 'O', frequency: 466.164, active: false },
   { note: 'B', key: 'L', frequency: 493.883, active: false },
 ]
+
+closeRotate.addEventListener('click', function () {
+  let modal = this.closest('.rotate')
+  modal.classList.add('hidden')
+})
 
 document.addEventListener('keydown', e => {
   if (!useKeys.checked) return
@@ -59,11 +65,13 @@ function playNotes() {
 
 function startNote(noteDetail, gain) {
   const gainNode = audioContext.createGain()
-  gainNode.gain.value = gain
   const oscillator = audioContext.createOscillator()
+
+  gainNode.gain.value = gain
   oscillator.frequency.value = noteDetail.frequency
   oscillator.type = 'sine'
   oscillator.connect(audioContext.destination)
   oscillator.start()
+
   noteDetail.oscillator = oscillator
 }
