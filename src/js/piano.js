@@ -34,6 +34,7 @@ document.addEventListener('keydown', e => {
 })
 
 document.addEventListener('keyup', e => {
+  if (!useKeys.checked) return
   const keyboardKey = e.code
   const noteDetail = getNoteDetail(keyboardKey)
   if (noteDetail == null) return
