@@ -6,6 +6,7 @@ const passwordInput = document.getElementById('password')
 const passwordConfirmationInput = document.getElementById('password-confirmation')
 const termsInput = document.getElementById('terms')
 const errorsList = document.querySelector('.errors-list')
+const successForm = document.querySelector('.success-form')
 
 // TODO: Define this function
 // Use a while loop to clear error list from dom
@@ -43,6 +44,7 @@ function showErrors(msgs) {
 // TODO: Create an event listener for when the form is submitted and do the following inside of it.
 loginForm.addEventListener('submit', e => {
   //    TODO: Create an array to store all error messages and clear any old error messages
+  e.preventDefault()
   let errorMsgs = []
   clearErrors()
 
@@ -75,6 +77,12 @@ loginForm.addEventListener('submit', e => {
   //    TODO: If there are any errors then prevent the form from submitting and show the error messages
   if (errorMsgs.length > 0) {
     showErrors(errorMsgs)
-    e.preventDefault()
+    return
+  } else {
+    successForm.classList.add('show')
   }
+
+  successForm.addEventListener('click', function () {
+    this.classList.remove('show')
+  })
 })
