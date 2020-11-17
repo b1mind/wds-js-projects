@@ -1,4 +1,4 @@
-//- //< Sassy settings
+//- //> Sassy vars
 $minWidthLg: 1000px;
 $minWidthMed: 800px;
 $minWidthSml: 420px;
@@ -47,6 +47,7 @@ img {
 
 ul {
   margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -309,6 +310,8 @@ section {
 .question-item:last-child {
   margin-bottom: 0;
 }
+
+//> Validation sign up form
 
 #form {
   position: relative;
