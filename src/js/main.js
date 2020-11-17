@@ -5,7 +5,7 @@ import './validation.js'
 const nav = document.querySelector('.navMain')
 const canHazBurger = document.querySelector('.canHazBurger')
 
-canHazBurger.addEventListener('click', e => {
+canHazBurger.addEventListener('click', () => {
   nav.classList.toggle('hidden')
 })
 
