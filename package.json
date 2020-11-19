@@ -38,5 +38,10 @@
         ]
       }
     }
-  }
+  },
+  "browserslist": [
+    "> 2%",
+    "not dead",
+    "not op_mob 59"
+  ]
 }
