@@ -1,5 +1,5 @@
-// TODO: Select all elements needed
-//    Use the HTML to figure out what classes/ids will work best for selecting each element
+// Select all elements needed
+// Use the HTML to figure out what classes/ids will work best for selecting each element
 const loginForm = document.getElementById('form')
 const usernameInput = document.getElementById('username')
 const passwordInput = document.getElementById('password')
@@ -8,7 +8,7 @@ const termsInput = document.getElementById('terms')
 const errorsList = document.querySelector('.errors-list')
 const successForm = document.querySelector('.success-form')
 
-// TODO: Define this function
+// Define this function
 // Use a while loop to clear error list from dom
 
 function clearErrors() {
@@ -25,7 +25,7 @@ function clearErrors() {
   errorsList.closest('.errors').classList.remove('show')
 }
 
-// TODO: Define this function
+// Define this function
 
 function showErrors(msgs) {
   // Add each error to the error-list element
@@ -41,14 +41,14 @@ function showErrors(msgs) {
   errorsList.closest('.errors').classList.add('show')
 }
 
-// TODO: Create an event listener for when the form is submitted and do the following inside of it.
+// create an event listener for when the form is submitted and do the following inside of it.
 loginForm.addEventListener('submit', e => {
-  //    TODO: Create an array to store all error messages and clear any old error messages
+  // Create an array to store all error messages and clear any old error messages
   e.preventDefault()
   let errorMsgs = []
   clearErrors()
 
-  //    TODO: Define the following validation checks with appropriate error messages
+  //  Define the following validation checks with appropriate error messages
   //      1. Ensure the username is at least 6 characters long
 
   if (usernameInput.value.length <= 5) {
@@ -74,7 +74,7 @@ loginForm.addEventListener('submit', e => {
     errorMsgs = [...errorMsgs, msg]
   }
 
-  //    TODO: If there are any errors then prevent the form from submitting and show the error messages
+  // If there are any errors then prevent the form from submitting and show the error messages
   if (errorMsgs.length > 0) {
     showErrors(errorMsgs)
     return
