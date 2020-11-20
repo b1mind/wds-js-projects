@@ -377,6 +377,8 @@ section {
   align-items: flex-start;
 }
 
+//< todo list
+
 #new-todo-form {
   display: flex;
   flex-direction: column;
@@ -411,4 +413,37 @@ section {
 
 [data-button-delete] {
   margin-left: 0.5rem;
+}
+
+//< accordion
+
+.card {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+  padding: 0.5rem;
+  font-size: 2rem;
+  align-items: center;
+  margin-bottom: -1px;
+}
+
+.card-body {
+  padding: 0 0.5rem;
+  height: 0;
+  overflow: hidden;
+}
+
+.card-body.show {
+  height: auto;
+  padding: 0.5rem;
 }
