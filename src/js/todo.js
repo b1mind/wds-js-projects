@@ -1,5 +1,3 @@
-console.log('Lets make a better todo!')
-
 const formTodo = document.querySelector('#new-todo-form')
 const todoInput = document.querySelector('#todo-input')
 const todoList = document.querySelector('#list')
