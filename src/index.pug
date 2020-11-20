@@ -30,9 +30,8 @@ html(lang="en")
           h1 Java Script Simplified (Beginner)
           p This is a repo dedicated to the projects I am doing for Web Dev Simplified 
             a(href="https://javascriptsimplified.com/") JavaScript Simplified beginner course
-            p
-            button#promise Promise
-
+            //- p
+            //- button#promise Promise
 
       section
         #piano.wrap
@@ -191,6 +190,27 @@ html(lang="en")
               h2 Thanks for registering
               p You have successfully created an account!
             
+      section
+        #todo-list.wrap
+          h2 Todo List
+          p Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti optio cupiditate eius illo aliquam dolorem ipsa corporis pariatur corrupti quisquam rem, distinctio ullam vel eum sit aperiam dicta itaque. Obcaecati?
+
+          ul#list
+          form#new-todo-form
+
+            label(for='todo-input') New Todo
+            input#todo-input(type='text')
+            button(type='submit') Add Todo
+
+          template#list-item-template
+            li.list-item(data-todo-id='')
+              label.list-item-label
+                input(type='checkbox' data-list-item-checkbox='')
+                span(data-list-item-text='')
+              button(data-button-delete='') Delete
+
+      section
+        .wrap
 
 
 
