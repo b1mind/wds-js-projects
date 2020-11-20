@@ -1,6 +1,7 @@
 import './piano.js'
 import './quiz.js'
 import './validation.js'
+import './promises.js'
 
 const nav = document.querySelector('.navMain')
 const canHazBurger = document.querySelector('.canHazBurger')
