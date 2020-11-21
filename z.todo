@@ -1,7 +1,20 @@
 Extra1M:
-  ☐ make piano clickable for touch/mouse?
+  ☐ nav bar close when link clicked (make sure to copy to psp-template)
   ☐ style login a bit?
   ☐ style a bit? if only one page make nicer sections
+
+Piano:
+  ☐ make piano clickable for touch/mouse?
+
+TodoList:
+  ☐ style better (use from svelte todo?)
+  ☐ clear input after enter
+  ☐ show error when nothing entered ? (svelte needs too?)
+
+Accordian:
+  ✔ watch the walkthrough to see how Kyle does it and add notes @done(20-11-20 15:09)
+  ☐ style and give min-width
+  ☐ change button text to chevron or some nice svg
 
 Archive:
   ✔ give piano keys the letters @done(20-11-12 11:34) @project(Extra1M)
