@@ -45,7 +45,7 @@ formTodo.addEventListener('submit', e => {
 
   renderTodo(newTodo)
   saveTodos()
-  todoName.value = ''
+  todoInput.value = ''
 })
 
 function renderTodo(todo) {
