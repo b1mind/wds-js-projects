@@ -7,6 +7,7 @@ import './validation'
 import './todo'
 import './accordion'
 import './maps'
+import './datePicker'
 
 //< lessons
 // import './async'
