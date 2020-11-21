@@ -6,6 +6,7 @@ import './quiz'
 import './validation'
 import './todo'
 import './accordion'
+import './maps'
 
 //< lessons
 // import './async'

@@ -6,6 +6,11 @@ html(lang="en")
     link(rel="shortcut icon", href="favicon.ico", type="image/x-icon")
     link(rel="stylesheet", href="scss/style.scss")
     script(defer src="js/main.js")
+
+    //- Map box stuff
+    script( src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js')
+    link(href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet')
+
     title JS simplified Projects
 
   body
@@ -23,13 +28,17 @@ html(lang="en")
             a(href="#quiz") Code Quiz
           li 
             a(href="#validation") Sign Up
+          li 
+            a(href="#todo-list") Todo List
+          li 
+            a(href="#accordion") Accordion
 
     main
       section
         .hero.wrap
           h1 Java Script Simplified (Beginner)
           p This is a repo dedicated to the projects I am doing for Web Dev Simplified 
-            a(href="https://javascriptsimplified.com/") JavaScript Simplified beginner course
+            a(target="_blank" href="https://javascriptsimplified.com/", rel="noopener noreferrer") JavaScript Simplified beginner course
             //- p
             //- button#promise Promise
 
@@ -242,5 +251,15 @@ html(lang="en")
       section
         .wrap
           h2 Google Maps Clone
+          p amet consectetur adipisicing elit. Quam, dignissimos incidunt ea numquam eveniet accusantium tempore impedit sit aliquid ipsa, recusandae voluptates laboriosam eligendi voluptatem odio? Distinctio optio ipsum exercitationem?
+            a(href="https://www.mapbox.com/install/js/cdn-complete/", target="_blank", rel="noopener noreferrer")
+              | MapBox api options
+          #map
+
+      section
+        .wrap
+          h2 Last project?
           p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dignissimos incidunt ea numquam eveniet accusantium tempore impedit sit aliquid ipsa, recusandae voluptates laboriosam eligendi voluptatem odio? Distinctio optio ipsum exercitationem?
+
+
 
