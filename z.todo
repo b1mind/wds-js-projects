@@ -8,7 +8,8 @@ Piano:
 
 TodoList:
   ☐ style better (use from svelte todo?)
-  ☐ clear input after enter
+  ✔ clear input after enter @done(20-11-21 00:37)
+  ☐ default todos if no localStorage
   ☐ show error when nothing entered ? (svelte needs too?)
 
 Accordian:
@@ -20,6 +21,10 @@ MapClone:
   ☐ use npm vs cdn and add directions and play around
   ☐ add some fun options
   ☐ map a full screen popout of the map
+
+DatePicker:
+  ☐ start date picker project
+
 
 Archive:
   ✔ give piano keys the letters @done(20-11-12 11:34) @project(Extra1M)
