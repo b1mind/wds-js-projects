@@ -19,12 +19,15 @@ Accordian:
 
 MapClone:
   ☐ use npm vs cdn and add directions and play around
+  ☐ make it display that location permissions
+  ☐ button to allow location 
   ☐ add some fun options
   ☐ map a full screen popout of the map
 
 DatePicker:
-  ☐ start date picker project
-
+  ✔ start date picker project @done(20-12-28 17:42)
+  ☐ make it fetch some api based on date picked
+  ☐ display fetched data to user
 
 Archive:
   ✔ give piano keys the letters @done(20-11-12 11:34) @project(Extra1M)

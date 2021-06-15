@@ -13,8 +13,6 @@ import {
   isSameMonth,
 } from 'date-fns'
 
-console.log(`Lets make a date picker`)
-
 const datePickerBtn = document.querySelector('.date-picker-button')
 const datePicker = document.querySelector('.date-picker')
 const datePickerHeader = document.querySelector('.current-month')
@@ -67,8 +65,6 @@ function setupDates(selectedDate) {
     })
   })
 }
-
-// function setupMonthArrows(selectedDate) {}
 
 nextMonthBtn.addEventListener('click', () => {
   currentDate = addMonths(currentDate, 1)

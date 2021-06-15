@@ -8,6 +8,7 @@ import './todo'
 import './accordion'
 import './maps'
 import './datePicker'
+import './store'
 
 //< lessons
 // import './async'
